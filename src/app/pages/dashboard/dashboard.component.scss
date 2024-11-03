@@ -1,0 +1,42 @@
+.dashboard {
+  margin: 30px;
+
+  .child-card {
+    margin: 10px;
+  }
+
+  .border-grey {
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+  }
+
+  .w-max-c {
+    width: max-content;
+  }
+
+  .p-8 {
+    padding: 8px !important;
+  }
+
+  .text-label {
+    font-size: var(--font-12);
+    color: var(--text-label);
+    font-family: "Inter-Regular";
+  }
+
+  .count-label {
+    font-size: var(--font-20);
+    color: var(--count-label);
+    font-family: "Inter-SemiBold";
+  }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .col-3,
+      .col-9,
+      .col-4 {
+        flex: 0 0 100%; /* Stack cards on smaller screens */
+        max-width: 100%;
+      }
+    }
+}

@@ -1,0 +1,115 @@
+{
+  "labels": [
+    "Assignment",
+    "Quiz",
+    "Presentation",
+    "Lab",
+    "Viva"
+  ],
+  "datasets": [
+    {
+      "label": "Completed",
+      "data": [
+        35,
+        85,
+        60,
+        40,
+        90
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Completed",
+      "data": [
+        75,
+        45,
+        45,
+        80,
+        0
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Completed",
+      "data": [
+        60,
+        20,
+        20
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Pending",
+      "data": [
+        100
+      ],
+      "backgroundColor": "#e8e8e8"
+    },
+    {
+      "label": "Completed",
+      "data": [
+        0,
+        80,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Completed",
+      "data": [
+        0,
+        25,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Completed",
+      "data": [
+        0,
+        55,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#91b07c"
+    },
+    {
+      "label": "Pending",
+      "data": [
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#e8e8e8"
+    },
+    {
+      "label": "Pending",
+      "data": [
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#e8e8e8"
+    },
+    {
+      "label": "Pending",
+      "data": [
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "backgroundColor": "#e8e8e8"
+    }
+  ]
+}

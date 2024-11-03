@@ -1,0 +1,52 @@
+.border-bottom-1 {
+  border-bottom: 1px solid var(--grey);
+}
+
+.text-dark {
+  color: var(--count-label) !important;
+  font-weight: 600;
+}
+
+.hypen {
+  position: relative;
+  left: 7px;
+}
+
+.last-hypen {
+  position: relative;
+  left: 9px;
+}
+
+.count {
+  position: relative;
+  left: 8px;
+}
+
+.last-count {
+  position: relative;
+  left: 10px;
+}
+
+.bg-course-outcome {
+  background-color: var(--bg-green);
+  color: #223c27;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 4px 4px 4px 0px;
+  font-family: "Inter-SemiBold";
+  border-radius: 5px;
+  font-size: var(--font-12);
+}
+
+.bg-course-mapped {
+  background-color: var(--bg-blue);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 4px 4px 4px 0px;
+  font-size: var(--font-12);
+  font-family: "Inter-SemiBold";
+  border-radius: 5px;
+}

@@ -1,0 +1,72 @@
+<!-- app.component.html -->
+<div class="dashboard grid">
+  <div class="col-12">
+    <div class="p-card">
+      <div class="p-card-body p-1">
+        <div class="grid">
+          <div class="col-3">
+            <div class="child-card border-grey">
+              <div class="m-3">
+                <app-course-detail
+                  [courseData]="courseData"
+                ></app-course-detail>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="grid">
+              <div class="col-12 pb-0">
+                <div class="child-card">
+                  <div class="grid">
+                    <div class="col-3 w-max-c">
+                      <div
+                        class="flex justify-content-between bg-black-alpha-20 border-round-lg p-8"
+                      >
+                        <div class="text-label align-content-around">
+                          Total Students
+                        </div>
+                        <div class="ml-4 count-label">102</div>
+                      </div>
+                    </div>
+                    <div class="col-4 w-max-c">
+                      <div
+                        class="flex justify-content-between bg-black-alpha-20 border-round-lg p-8"
+                      >
+                        <div class="text-label align-content-around">
+                          Course Average Mark
+                        </div>
+                        <div class="ml-4 count-label">85%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-title ml-3">Assessment Progress</div>
+              <div class="col-12 pt-0">
+                <div class="child-card border-grey">
+                  <div class="p-3">
+                    <app-assessment-progress
+                      [chartDataAssessment]="chartDataAssessment"
+                      [chartDataAssessmentOptions]="chartDataAssessmentOptions"
+                    ></app-assessment-progress>
+                  </div>
+                </div>
+              </div>
+              <div class="course-title ml-3">Student's Attendance</div>
+              <div class="col-12 pt-0">
+                <div class="child-card border-grey">
+                  <div class="p-3">
+                    <app-student-attendance
+                      [chartDataAttendance]="chartDataAttendance"
+                      [chartAttendanceOptions]="chartAttendanceOptions"
+                    ></app-student-attendance>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

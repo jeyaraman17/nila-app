@@ -1,0 +1,72 @@
+{
+  "weekly_data": [
+    {
+      "week": "0",
+      "attendance": null
+    },
+    {
+      "week": "1/7",
+      "attendance": 30
+    },
+    {
+      "week": "8/7",
+      "attendance": 55
+    },
+    {
+      "week": "15/7",
+      "attendance": 20
+    },
+    {
+      "week": "22/7",
+      "attendance": 80
+    },
+    {
+      "week": "29/7",
+      "attendance": 55
+    },
+    {
+      "week": "5/8",
+      "attendance": 60
+    },
+    {
+      "week": "12/8",
+      "attendance": 80
+    },
+    {
+      "week": "19/8",
+      "attendance": 55
+    },
+    {
+      "week": "26/8",
+      "attendance": 82
+    },
+    {
+      "week": "2/9",
+      "attendance": 95
+    },
+    {
+      "week": "9/9",
+      "attendance": 75
+    },
+    {
+      "week": "16/9",
+      "attendance": 55
+    },
+    {
+      "week": "23/9",
+      "attendance": 75
+    },
+    {
+      "week": "30/9",
+      "attendance": 50
+    },
+    {
+      "week": "14/10",
+      "attendance": null
+    },
+    {
+      "week": "21/10",
+      "attendance": null
+    }
+  ]
+}

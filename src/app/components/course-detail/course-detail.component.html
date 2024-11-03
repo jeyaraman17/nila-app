@@ -1,0 +1,52 @@
+<div>
+  <div class="course-title border-bottom-1 pb-2">
+    Course Code
+    <div class="course-value pt-1">
+      {{ courseData.course_code }}
+    </div>
+  </div>
+  <div class="course-title border-bottom-1 pb-2 pt-2">
+    Course Name
+    <div class="course-value pt-1">{{ courseData.course_name }}</div>
+  </div>
+  <div class="course-title border-bottom-1 pb-2 pt-2">
+    Course Type
+    <div class="course-value pt-1">{{ courseData.course_type }}</div>
+  </div>
+  <div class="course-title border-bottom-1 pb-2 pt-2">
+    Course Period
+    <div class="course-value pt-1">
+      {{ courseData.course_period }}
+    </div>
+  </div>
+  <div class="course-title border-bottom-1 pb-2 pt-2">
+    Credits (4) @for (creditType of ['lecture', 'tutorial', 'practical',
+    'project']; track $index) {
+    <div class="course-value pt-1">
+      {{ creditType | titlecase }}
+      <span [ngClass]="{ hypen: $index !== 2, 'last-hypen': $index === 3 }"
+        >-</span
+      >
+      <span
+        class="text-dark"
+        [ngClass]="{ count: $index !== 2, 'last-count': $index === 3 }"
+        >{{ courseData.credits[creditType] }}</span
+      >
+    </div>
+    }
+  </div>
+
+  <div class="course-title pb-2 pt-2">Course Outcomes (COs)</div>
+  @for (courseOutcome of courseData.course_outcomes; track $index) {
+  <div class="bg-course-outcome">
+    {{ courseOutcome }}
+  </div>
+  }
+  <div class="border-bottom-1 pb-2"></div>
+  <div class="course-title pb-2 pt-2">Mapped to this Course</div>
+  @for (courseMapp of courseData.mapped_program_outcomes; track $index) {
+  <div class="bg-course-mapped">
+    {{ courseMapp }}
+  </div>
+  }
+</div>
