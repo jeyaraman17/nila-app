@@ -2,26 +2,60 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Installation](#installation)
+- [Development Server](#development-server)
+- [Code Scaffolding](#code-scaffolding)
+- [Building the Project](#building-the-project)
+- [Further Help](#further-help)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get started, clone the repository and install the dependencies:
 
-## Build
+```bash
+git clone https://github.com/jeyaraman17/nila-app.git
+cd nila-app
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Development Server
 
-## Running unit tests
+Run ng serve to start the development server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+## Code Scaffolding
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To generate a new component, run:
 
-## Further help
+```bash
+ng generate component component-name
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+You can also use the following commands to generate other elements:
+
+```bash
+ng generate directive|pipe|service|class|guard|interface|enum|module
+```
+
+## Building the Project
+
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
+
+```bash
+ng build
+```
+
+## Further Help
+
+For more help with Angular CLI commands, use:
+
+```bash
+ng help
+```
+
+You can also check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) for detailed information.
