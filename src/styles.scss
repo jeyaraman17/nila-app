@@ -1,4 +1,3 @@
-
 @import "assets/css/variables.scss";
 
 @font-face {
@@ -22,8 +21,12 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--body);
+}
+
+.cp {
+  cursor: pointer;
 }
 
 .course-title {

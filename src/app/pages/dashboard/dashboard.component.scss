@@ -1,5 +1,7 @@
 .dashboard {
   margin: 30px;
+  height: 96vh !important;
+  overflow-y: overlay;
 
   .child-card {
     margin: 10px;
@@ -30,13 +32,13 @@
     font-family: "Inter-SemiBold";
   }
 
-    /* Responsive styling */
-    @media (max-width: 768px) {
-      .col-3,
-      .col-9,
-      .col-4 {
-        flex: 0 0 100%; /* Stack cards on smaller screens */
-        max-width: 100%;
-      }
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .col-3,
+    .col-9,
+    .col-4 {
+      flex: 0 0 100%; /* Stack cards on smaller screens */
+      max-width: 100%;
     }
+  }
 }

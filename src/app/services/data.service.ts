@@ -11,8 +11,8 @@ import { AssessmentProgress } from '../model/assessment';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  getCourseInformation(): Observable<Course> {
-    return this.http.get<Course>('/assets/json/courseInformation.json');
+  getCourseInformation(): Observable<Course[]> {
+    return this.http.get<Course[]>('/assets/json/courseInformation.json');
   }
 
   getAssessmentProgress(): Observable<AssessmentProgress> {

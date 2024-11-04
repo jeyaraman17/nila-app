@@ -1,26 +1,28 @@
-{
-  "course_code": "BA3102",
-  "course_name": "Quantitative Techniques",
-  "course_type": "Program Elective",
-  "course_period": "Semester - I",
-  "credits": {
-    "lecture": 3,
-    "tutorial": 0,
-    "practical": 1,
-    "project": 0
-  },
-  "course_outcomes": [
-    "CO2",
-    "CO4",
-    "CO5",
-    "CO7",
-    "CO13",
-    "CO14"
-  ],
-  "mapped_program_outcomes": [
-    "PO7",
-    "PO10",
-    "PO12",
-    "PO8"
-  ]
-}
+[
+  {
+    "course_code": "CH101",
+    "course_name": "Chemistry",
+    "course_type": "Core",
+    "course_period": "Semester - I",
+    "credits": {
+      "lecture": 3,
+      "tutorial": 0,
+      "practical": 1,
+      "project": 0
+    },
+    "course_outcomes": [
+      "CH1",
+      "CH2",
+      "CH3",
+      "CH4",
+      "CH5",
+      "CH6"
+    ],
+    "mapped_program_outcomes": [
+      "PO7",
+      "PO10",
+      "PO12",
+      "PO8"
+    ]
+  }
+]

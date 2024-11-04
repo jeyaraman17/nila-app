@@ -50,3 +50,21 @@
   font-family: "Inter-SemiBold";
   border-radius: 5px;
 }
+
+.p-r {
+  position: relative;
+}
+
+.pos-ab {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+::ng-deep {
+  .p-button {
+    padding: 5px;
+    font-size: var(--font-12);
+  }
+}

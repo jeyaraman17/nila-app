@@ -1,0 +1,50 @@
+<div class="layout-wrapper">
+  <!-- Top Navigation Bar -->
+  <p-menubar class="top-nav">
+    <ng-template pTemplate="end">
+      <span class="username">John Doe</span>
+    </ng-template>
+  </p-menubar>
+
+  <div class="layout-content">
+    <p-sidebar
+      [visible]="true"
+      class="sidebar"
+      [baseZIndex]="1000"
+      [modal]="isMobile"
+      [ngClass]="{ 'sidebar-collapsed': !isSidebarVisible }"
+      [showCloseIcon]="false"
+    >
+      <ng-template pTemplate="header">
+        <i class="pi pi-bars menu-icon cp" (click)="toggleSidebar()"></i>
+      </ng-template>
+      <div
+        class="menu-label pb-3"
+        routerLink="/dashboard"
+        routerLinkActive="active-link"
+      >
+        @if (isSidebarVisible) {
+        <i class="pi pi-th-large menu-icon"></i>
+        } @else {
+        <div class="pi pi-th-large menu-icon">&nbsp;Dashboard</div>
+        }
+      </div>
+      <div
+        class="menu-label"
+        routerLink="/course"
+        routerLinkActive="active-link"
+      >
+        @if (isSidebarVisible) {
+        <i class="pi pi-graduation-cap menu-icon"></i>
+        } @else {
+        <div class="pi pi-graduation-cap menu-icon">&nbsp;Course</div>
+        }
+      </div>
+    </p-sidebar>
+
+    <!-- Main Content Area with Router Outlet for Child Routes -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

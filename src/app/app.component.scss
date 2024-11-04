@@ -1,0 +1,32 @@
+::ng-deep {
+  .p-inputtext {
+    height: 36px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .p-inputtext:focus {
+    border-color: #ccc;
+    outline: none;
+  }
+
+  .p-inputtext:enabled:focus {
+    box-shadow: none;
+  }
+
+  .p-inputtext {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .p-inputtext::placeholder {
+    color: #aaa;
+    font-size: var(--font-13);
+    opacity: 1;
+  }
+
+  .p-menubar {
+    background: var(--white);
+    padding: 12px;
+  }
+}

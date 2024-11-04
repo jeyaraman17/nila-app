@@ -1,27 +1,92 @@
+@if (courseData.length) {
 <div>
-  <div class="course-title border-bottom-1 pb-2">
+  @if (courseData[0].course_code) {
+  <div class="course-title border-bottom-1 pb-2 p-r">
     Course Code
-    <div class="course-value pt-1">
-      {{ courseData.course_code }}
+    <div class="pos-ab">
+      <i
+        (click)="toggleCourse()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCourse,
+          'pi-chevron-down': !isExpandCourse
+        }"
+      ></i>
     </div>
+    @if (isExpandCourse) {
+    <div class="course-value pt-1">
+      {{ courseData[0].course_code }}
+    </div>
+    }
   </div>
-  <div class="course-title border-bottom-1 pb-2 pt-2">
+  } @if (courseData[0].course_name) {
+  <div class="course-title border-bottom-1 pb-2 pt-2 p-r">
     Course Name
-    <div class="course-value pt-1">{{ courseData.course_name }}</div>
-  </div>
-  <div class="course-title border-bottom-1 pb-2 pt-2">
-    Course Type
-    <div class="course-value pt-1">{{ courseData.course_type }}</div>
-  </div>
-  <div class="course-title border-bottom-1 pb-2 pt-2">
-    Course Period
-    <div class="course-value pt-1">
-      {{ courseData.course_period }}
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseName()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCourseName,
+          'pi-chevron-down': !isExpandCourseName
+        }"
+      ></i>
     </div>
+    @if (isExpandCourseName) {
+    <div class="course-value pt-1">{{ courseData[0].course_name }}</div>
+    }
   </div>
-  <div class="course-title border-bottom-1 pb-2 pt-2">
-    Credits (4) @for (creditType of ['lecture', 'tutorial', 'practical',
-    'project']; track $index) {
+  } @if (courseData[0].course_type) {
+  <div class="course-title border-bottom-1 pb-2 pt-2 p-r">
+    Course Type
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseType()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCourseType,
+          'pi-chevron-down': !isExpandCourseType
+        }"
+      ></i>
+    </div>
+    @if (isExpandCourseType) {
+    <div class="course-value pt-1">{{ courseData[0].course_type }}</div>
+    }
+  </div>
+  } @if (courseData[0].course_period) {
+  <div class="course-title border-bottom-1 pb-2 pt-2 p-r">
+    Course Period
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseSemester()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCourseSem,
+          'pi-chevron-down': !isExpandCourseSem
+        }"
+      ></i>
+    </div>
+    @if (isExpandCourseSem) {
+    <div class="course-value pt-1">
+      {{ courseData[0].course_period }}
+    </div>
+    }
+  </div>
+  } @if (courseData[0].credits) {
+  <div class="course-title border-bottom-1 pb-2 pt-2 p-r">
+    Credits (4)
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseCredit()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCourseCredit,
+          'pi-chevron-down': !isExpandCourseCredit
+        }"
+      ></i>
+    </div>
+    @if (isExpandCourseCredit) { @for (creditType of ['lecture', 'tutorial',
+    'practical', 'project']; track $index) {
     <div class="course-value pt-1">
       {{ creditType | titlecase }}
       <span [ngClass]="{ hypen: $index !== 2, 'last-hypen': $index === 3 }"
@@ -30,23 +95,50 @@
       <span
         class="text-dark"
         [ngClass]="{ count: $index !== 2, 'last-count': $index === 3 }"
-        >{{ courseData.credits[creditType] }}</span
+        >{{ courseData[0].credits[creditType] }}</span
       >
     </div>
-    }
+    } }
   </div>
-
-  <div class="course-title pb-2 pt-2">Course Outcomes (COs)</div>
-  @for (courseOutcome of courseData.course_outcomes; track $index) {
+  } @if (courseData[0].course_outcomes.length) {
+  <div class="course-title pb-2 pt-2 p-r">
+    Course Outcomes (COs)
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseCO()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandCO,
+          'pi-chevron-down': !isExpandCO
+        }"
+      ></i>
+    </div>
+  </div>
+  @if (isExpandCO) { @for (courseOutcome of courseData[0].course_outcomes; track
+  $index) {
   <div class="bg-course-outcome">
     {{ courseOutcome }}
   </div>
-  }
+  } } } @if (courseData[0].mapped_program_outcomes.length) {
   <div class="border-bottom-1 pb-2"></div>
-  <div class="course-title pb-2 pt-2">Mapped to this Course</div>
-  @for (courseMapp of courseData.mapped_program_outcomes; track $index) {
+  <div class="course-title pb-2 pt-2 p-r">
+    Mapped to this Course
+    <div class="pos-ab mt-2">
+      <i
+        (click)="toggleCourseMC()"
+        class="pi"
+        [ngClass]="{
+          'pi-chevron-up': isExpandMC,
+          'pi-chevron-down': !isExpandMC
+        }"
+      ></i>
+    </div>
+  </div>
+  @if (isExpandMC) { @for (courseMapp of courseData[0].mapped_program_outcomes;
+  track $index) {
   <div class="bg-course-mapped">
     {{ courseMapp }}
   </div>
-  }
+  } }}
 </div>
+}

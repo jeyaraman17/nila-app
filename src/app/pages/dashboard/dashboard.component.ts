@@ -10,7 +10,8 @@ import { AssessmentProgress } from '../../model/assessment';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  courseData: Course = <Course>{};
+  courseData: any[] = [];
+  courseMainData: Course[] = [];
   chartDataAssessment: AssessmentProgress = <AssessmentProgress>{};
   chartDataAssessmentOptions: any;
   chartDataAttendance: ChartData = <ChartData>{};
@@ -18,6 +19,7 @@ export class DashboardComponent implements OnInit {
   courseError: string = '';
   assessmentError: string = '';
   attendanceError: string = '';
+  searchText: string = '';
 
   constructor(private dataService: DataService) {}
 
@@ -29,7 +31,7 @@ export class DashboardComponent implements OnInit {
 
   getCourseDetail() {
     this.dataService.getCourseInformation().subscribe(
-      (response) => (this.courseData = response),
+      (response) => (this.courseMainData = this.courseData = response),
       (err) => console.error(err)
     );
   }
@@ -117,5 +119,58 @@ export class DashboardComponent implements OnInit {
       },
       (err) => console.error(err)
     );
+  }
+
+  filterCourses(searchText: string): void {
+    if (!searchText) {
+      this.courseData = this.courseMainData;
+      return;
+    }
+
+    const searchLower = searchText.toLowerCase();
+
+    // Filter and map the courses based on exact matches in relevant properties
+    this.courseData = this.courseMainData
+      .filter((course: Course) => {
+        return (
+          course.course_code.toLowerCase() === searchLower ||
+          course.course_name.toLowerCase() === searchLower ||
+          course.course_type.toLowerCase() === searchLower ||
+          course.course_period.toLowerCase() === searchLower ||
+          course.course_outcomes.some(
+            (outcome) => outcome.toLowerCase() === searchLower
+          ) ||
+          course.mapped_program_outcomes.some(
+            (mappedOutcome) => mappedOutcome.toLowerCase() === searchLower
+          )
+        );
+      })
+      .map((course: Course) => {
+        return {
+          course_code:
+            course.course_code.toLowerCase() === searchLower
+              ? course.course_code
+              : null,
+          course_name:
+            course.course_name.toLowerCase() === searchLower
+              ? course.course_name
+              : null,
+          course_type:
+            course.course_type.toLowerCase() === searchLower
+              ? course.course_type
+              : null,
+          course_period:
+            course.course_period.toLowerCase() === searchLower
+              ? course.course_period
+              : null,
+          credits: course.credits,
+          course_outcomes: course.course_outcomes.filter(
+            (outcome) => outcome.toLowerCase() === searchLower
+          ),
+          mapped_program_outcomes: course.mapped_program_outcomes.filter(
+            (mappedOutcome) => mappedOutcome.toLowerCase() === searchLower
+          ),
+        };
+      });
   }
 }
