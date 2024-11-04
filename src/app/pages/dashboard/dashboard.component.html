@@ -16,15 +16,12 @@
           <div class="col-3">
             <div class="child-card border-grey">
               <div class="m-3">
-                <app-course-detail
-                  [courseData]="courseData"
-                ></app-course-detail>
-                <!-- @if (isMatching) {<app-course-detail
+                @if (courseData.length) {<app-course-detail
                   [courseData]="courseData"
                 ></app-course-detail
                 >} @else {
                 <p>No matching course found.</p>
-                } -->
+                }
               </div>
             </div>
           </div>
