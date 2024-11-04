@@ -1,7 +1,3 @@
-# Architectural Diagram
-
-This document describes the architecture of the Angular application, focusing on how the components, service layer, and data assets are structured.
-
 ## Architecture Overview
 
 The application follows a layered architecture, where the presentation, service, and data layers are organized to keep the code modular, maintainable, and scalable.
